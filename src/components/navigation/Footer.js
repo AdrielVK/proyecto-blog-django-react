@@ -93,20 +93,16 @@ const navigation = {
 
 function Footer(){
     return(
-        <footer className="bg-white" aria-labelledby="footer-heading">
+        <footer className="bg-gray-50" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
         <div className="mx-auto max-w-full py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8 xl:col-span-1">
-              <img
-                className="h-10"
-                src="https://tailwindui.com/img/logos/mark.svg?color=gray&shade=300"
-                alt="Company name"
-              />
+              
               <p className="text-base text-gray-500">
-                Making the world a better place through constructing elegant hierarchies.
+                Agencia Proyecto S.A.
               </p>
               <div className="flex space-x-6">
                 {navigation.social.map((item) => (
