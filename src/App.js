@@ -1,34 +1,27 @@
-import Error404 from 'containers/errors/Error404';
-import Home from 'containers/pages/Home';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'
 import store from 'store';
 import { Provider } from 'react-redux';
-import Servicios from 'containers/pages/Servicios';
-import Casos from 'containers/pages/Casos';
-import Nosotros from 'containers/pages/Nosotros';
-import Contacto from 'containers/pages/Contacto';
-import Contratanos from 'containers/pages/Contratanos';
+import AnimatedRoutes from 'AnimatedRoutes';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 function App() {
   return (
-    <Provider store={store}>
-      <Router>
-        <Routes>
-          {/*error display*/}
-          <Route path='*' element={<Error404/>} />
-
-          {/*home display*/}
-          <Route path='/' element={<Home/>} />
-
-          <Route path='/Casos' element={<Casos/>} />
-          <Route path='/Servicios' element={<Servicios/>} />
-          <Route path='/Nosotros' element={<Nosotros/>} />
-          <Route path='/Contacto' element={<Contacto/>} />
-          <Route path='/Contratanos' element={<Contratanos/>} />
-
-        </Routes>
-      </Router>
-    </Provider>
+    <HelmetProvider>
+      <Helmet>
+        <title>Adriel Vallejos Kehmeier - Proyecto 1</title>
+        <meta name='description' content='Project App Full-Stack developed by Adriel Vallejos Kehmeier'></meta>
+        <link rel='canonical' href='www.//AdrielValejosApp.com'/>
+        <meta name='robots' content='all'></meta>
+        <meta name='keywords' content='portfolio, Adriel Vallejos Kehmeier, Fullstack-app, fullstack developer'></meta>
+        <meta name='published' content='Adriel Vallejos Kehmeier'></meta>
+      </Helmet>
+      <Provider store={store}>
+        <Router>
+          <AnimatedRoutes/>
+        </Router>
+      </Provider>
+    </HelmetProvider>
   );
 }
 

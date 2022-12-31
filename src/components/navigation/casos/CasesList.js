@@ -1,16 +1,11 @@
-import Footer from "components/navigation/Footer"
-import Navbar from "components/navigation/Navbar"
-import HeaderServices from "components/navigation/services/Header"
-import ServicesList from "components/navigation/services/ServicesList"
-import Layout from "hocs/layouts/Layout"
-import { useEffect } from "react"
-import {Helmet} from 'react-helmet-async'
+import CaseCard from './CaseCard'
+import Carousel from '@itseasy21/react-elastic-carousel'
 
-
-function Services(){
-    const posts_software = [
+  export default function CasesList() {
+    const posts = [
         {
-          title: 'Titulo 1',
+            id:'0000-qwer', 
+          title: 'Boost your conversion rate',
           href: '#',
           category: { name: 'Article', href: '#' },
           description:
@@ -28,7 +23,8 @@ function Services(){
           },
         },
         {
-          title: 'Titulo 2',
+            id:'1111-tyui',
+          title: 'How to use search engine optimization to drive sales',
           href: '#',
           category: { name: 'Video', href: '#' },
           description:
@@ -46,7 +42,8 @@ function Services(){
           },
         },
         {
-          title: 'Titulo 3',
+            id:'2222-uiop',
+          title: 'Improve your customer experience',
           href: '#',
           category: { name: 'Case Study', href: '#' },
           description:
@@ -65,33 +62,32 @@ function Services(){
         },
     ]
 
-    useEffect(()=>{
-      window.scrollTo(0,0)
-    },[])
+    const breakPoints = [
+        { width: 1, itemsToShow: 1, itemsToScroll: 1},
+        { width: 1280, itemsToShow: 2, itemsToScroll: 2},
+        {width: 1750, itemsToShow:3, itemsToScroll:2},
+    ]   
 
-    return(
-        
-        <Layout>
-            <Helmet>
-              <title>Adriel Vallejos Kehmeier - Servicios</title>
-              <meta name='description' content='Project App Full-Stack developed by Adriel Vallejos Kehmeier'></meta>
-              <link rel='canonical' href='www.//AdrielValejosApp.com'/>
-              <meta name='robots' content='all'></meta>
-              <meta name='keywords' content='portfolio, Adriel Vallejos Kehmeier, Fullstack-app, fullstack developer'></meta>
-              <meta name='published' content='Adriel Vallejos Kehmeier'></meta>
-            </Helmet>
-            <Navbar/>
-            <div className="pt-28">
-                <HeaderServices/>
-                <ServicesList
-                    posts={posts_software} 
-                     
-                    title_software={"Servicios de Desarrollo de Software"}
-                />  
-            </div>
-            <Footer/>
-        </Layout>
+    return (
+      <div className="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pb-28">
+        <div className="absolute inset-0">
+          <div className="h-1/3 bg-white sm:h-2/3" />
+        </div>
+        <div className="relative mx-auto max-w-full">
+        <Carousel
+            itemsToScroll={3}
+            itemsToShow={3}
+            breakPoints={breakPoints}
+            pagination={false}
+            itemPadding={[0,48]}
+        >    
+          
+        {posts.map((post,index) => (
+            <CaseCard index={index} data={post}/>
+        ))}
+          
+        </Carousel>
+        </div>
+      </div>
     )
-};
-
-export default Services
+  }
