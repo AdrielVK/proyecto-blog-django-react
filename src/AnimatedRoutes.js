@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import Servicios from 'containers/pages/Servicios';
 import Casos from 'containers/pages/Casos';
 import Nosotros from 'containers/pages/Nosotros';
-import Contacto from 'containers/pages/Contacto';
+import Blog from 'containers/pages/Blog';
 import Contratanos from 'containers/pages/Contratanos';
 import Error404 from 'containers/errors/Error404';
 import Home from 'containers/pages/Home';
@@ -22,7 +22,7 @@ export default function AnimatedRoutes(){
                 <Route path='/Casos' element={<Casos/>} />
                 <Route path='/Servicios' element={<Servicios/>} />
                 <Route path='/Nosotros' element={<Nosotros/>} />
-                <Route path='/Contacto' element={<Contacto/>} />
+                <Route path='/Blog' element={<Blog/>} />
                 <Route path='/Contratanos' element={<Contratanos/>} />
             </Routes>
         </AnimatePresence>

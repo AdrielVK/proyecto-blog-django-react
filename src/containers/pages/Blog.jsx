@@ -4,7 +4,7 @@ import Layout from "hocs/layouts/Layout"
 import { useEffect } from "react"
 import {Helmet} from 'react-helmet-async'
 
-function Home(){
+function Blog(){
     useEffect(()=>{
         window.scrollTo(0,0)
     },[])
@@ -20,12 +20,12 @@ function Home(){
             </Helmet>
             <Navbar/>
             <div className="pt-28">
-                Contacto
-                <Footer/>
+                Blog
             </div>
+            <Footer/>
             
         </Layout>
     )
 };
 
-export default Home
+export default Blog

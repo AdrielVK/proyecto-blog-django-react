@@ -1,6 +1,7 @@
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-router-dom";
 import homeimg from "assets/img/home.png"
+import background from "assets/img/backgrund.jpg"
 
 function Header(){
     

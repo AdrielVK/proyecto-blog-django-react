@@ -186,7 +186,7 @@ function Navbar(){
                         before:via-slate-400
                         before:to-zinc-500
                         hover:before:w-full
-                        hover:before:opacity-100">Contacto</NavLink>
+                        hover:before:opacity-100">Blog</NavLink>
                         <Link 
                             to='/contratanos'
                             
