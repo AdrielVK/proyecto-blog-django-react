@@ -9,12 +9,15 @@ import Navbar from "components/navigation/Navbar"
 import Layout from "hocs/layouts/Layout"
 import { useEffect } from "react"
 import {Helmet} from 'react-helmet-async'
-
+import { connect } from "react-redux"
 
 function Home(){
+
     useEffect(()=>{
         window.scrollTo(0,0)
+        
     },[])
+
     return(
         <Layout>
             <Helmet>
@@ -38,5 +41,6 @@ function Home(){
         </Layout>
     )
 };
+
 
 export default Home

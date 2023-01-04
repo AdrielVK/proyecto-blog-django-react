@@ -83,7 +83,7 @@ function Navbar(){
                         font-medium
                         leading-6
                         text-gray-900 
-                        
+                        hover:text-indigo-500 
                         capitalize
                         relative
                         transition-all
