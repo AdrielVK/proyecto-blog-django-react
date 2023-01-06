@@ -1,12 +1,12 @@
-import Footer from "components/navigation/Footer"
-import Header from "components/navigation/nosotros/Header"
-import Navbar from "components/navigation/Navbar"
-import Team from "components/navigation/nosotros/Team"
-import Testimonial from "components/navigation/nosotros/testimonial"
+import Footer from "components/Footer"
+import Header from "components/nosotros/Header"
+import Navbar from "components/Navbar"
+import Team from "components/nosotros/Team"
+import Testimonial from "components/nosotros/testimonial"
 import Layout from "hocs/layouts/Layout"
 import { useEffect } from "react"
-import TestStats from "components/navigation/nosotros/TestStats"
-import Client from "components/navigation/nosotros/Clients"
+import TestStats from "components/nosotros/TestStats"
+import Client from "components/nosotros/Clients"
 import {Helmet} from 'react-helmet-async'
 
 function Home(){

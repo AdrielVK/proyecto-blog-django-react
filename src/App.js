@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'
 import store from 'store';
 import { Provider } from 'react-redux';
-import AnimatedRoutes from 'AnimatedRoutes';
+import AnimatedRoutes from 'Routes';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 function App() {

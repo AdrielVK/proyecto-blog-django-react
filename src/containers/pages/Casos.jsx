@@ -1,7 +1,7 @@
-import CasesList from "components/navigation/casos/CasesList"
-import HeaderCasos from "components/navigation/casos/Header"
-import Footer from "components/navigation/Footer"
-import Navbar from "components/navigation/Navbar"
+import CasesList from "components/casos/CasesList"
+import HeaderCasos from "components/casos/Header"
+import Footer from "components/Footer"
+import Navbar from "components/Navbar"
 import Layout from "hocs/layouts/Layout"
 import { useEffect } from "react"
 import {Helmet} from 'react-helmet-async'

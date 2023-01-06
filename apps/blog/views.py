@@ -76,16 +76,17 @@ class PostDetailView(APIView):
         
 class SearchBlogView(APIView):
     permission_classes = (permissions.AllowAny,)
-    def get(self,request):
+    def get(self,request, format=None):
         search_term = request.query_params.get('s')
         matches = Post.postobjects.filter(
-            Q(title__icontains=search_term) | 
-            Q(description__icontains=search_term) | 
+            Q(title__icontains=search_term) |
+            Q(description__icontains=search_term) |
+            Q(content__icontains=search_term) |
             Q(category__name__icontains=search_term)
-        ) 
+        )
 
-        paginator = LargeSetPagination()
+        paginator = SmallSetPagination()
         results = paginator.paginate_queryset(matches, request)
 
         serializer = PostListSerializer(results, many=True)
-        return paginator.get_paginated_response({'filtered_posts':serializer.data})
+        return paginator.get_paginated_response({'filtered_posts': serializer.data})

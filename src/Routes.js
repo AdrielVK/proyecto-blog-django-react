@@ -7,23 +7,26 @@ import Contratanos from 'containers/pages/Contratanos';
 import Error404 from 'containers/errors/Error404';
 import Home from 'containers/pages/Home';
 import {AnimatePresence} from 'framer-motion'
-
+import Category from 'containers/pages/Category';
+import Search from 'containers/pages/Search';
+import term from './components/blog/CategoriesHearder'
 export default function AnimatedRoutes(){
     const location = useLocation()
     return(
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
                 {/*error display*/}
-                <Route path='*' element={<Error404/>} />
+                <Route path="*" element={<Error404/>} />
 
                 {/*home display*/}
-                <Route path='/' element={<Home/>} />
-
-                <Route path='/Casos' element={<Casos/>} />
-                <Route path='/Servicios' element={<Servicios/>} />
-                <Route path='/Nosotros' element={<Nosotros/>} />
-                <Route path='/Blog' element={<Blog/>} />
-                <Route path='/Contratanos' element={<Contratanos/>} />
+                <Route path="/" element={<Home/>} />
+                <Route path="/Casos" element={<Casos/>} />
+                <Route path="/Servicios" element={<Servicios/>} />
+                <Route path="/Nosotros" element={<Nosotros/>} />
+                <Route path="/Blog" element={<Blog/>} />
+                <Route path="/category/:slug" element={<Category />}/>
+                <Route path="/s/:term" element={<Search/>}/>
+                <Route path="/Contratanos" element={<Contratanos/>} />
             </Routes>
         </AnimatePresence>
     )

@@ -1,7 +1,7 @@
-import Footer from "components/navigation/Footer"
-import Navbar from "components/navigation/Navbar"
-import HeaderServices from "components/navigation/services/Header"
-import ServicesList from "components/navigation/services/ServicesList"
+import Footer from "components/Footer"
+import Navbar from "components/Navbar"
+import HeaderServices from "components/services/Header"
+import ServicesList from "components/services/ServicesList"
 import Layout from "hocs/layouts/Layout"
 import { useEffect } from "react"
 import {Helmet} from 'react-helmet-async'

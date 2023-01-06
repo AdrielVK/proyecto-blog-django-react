@@ -161,7 +161,7 @@ function Navbar(){
                         before:to-zinc-500
                         hover:before:w-full
                         hover:before:opacity-100">Nosotros</NavLink>
-                        <NavLink to='/contacto' className=" mx-4 
+                        <NavLink to='/blog' className=" mx-4 
                         text-lg 
                         inline-flex 
                         font-medium 
