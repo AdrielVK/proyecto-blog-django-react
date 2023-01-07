@@ -10,6 +10,8 @@ import {AnimatePresence} from 'framer-motion'
 import Category from 'containers/pages/Category';
 import Search from 'containers/pages/Search';
 import term from './components/blog/CategoriesHearder'
+import PostDetail from 'containers/pages/PostDetail';
+
 export default function AnimatedRoutes(){
     const location = useLocation()
     return(
@@ -26,6 +28,7 @@ export default function AnimatedRoutes(){
                 <Route path="/Blog" element={<Blog/>} />
                 <Route path="/category/:slug" element={<Category />}/>
                 <Route path="/s/:term" element={<Search/>}/>
+                <Route path="/blog/:slug" element={<PostDetail/>}/>
                 <Route path="/Contratanos" element={<Contratanos/>} />
             </Routes>
         </AnimatePresence>

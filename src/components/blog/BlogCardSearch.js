@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import { Link } from "react-router-dom"
 
 
-export default function BlogCardHorizontal({data,index}) {
+export default function BlogCardSearch({data,index}) {
 
     
 
@@ -29,12 +29,12 @@ export default function BlogCardHorizontal({data,index}) {
                     <div className="md:flex min-w-0 md:flex-1 items-center">
                         <figure className="p-0 flex-shrink-0">
                             <img id={index} className="rounded h-64 w-full md:w-auto object-cover transition duration-700 ease-in-out "
-                                src={'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80'}/>
+                                src={data.thumbnail}/>
                         </figure>
                         <div className="p-0 lg:p-4 min-w-0 flex-1 ">
                             <h2 id={`title`+data.id} className="md:absolute  md:top-4 leading-8  transition duration-700 ease-in-out text-xl font-bold">{data.title.length > 75 ? data.title.slice(0,74) + '...' :data.title}</h2>
                             <div className=" md:absolute md:top-28">
-                                <span className=" hover:text-indigo-500 leading-8 transition duration-700 ease-in-out text-sm font-medium text-indigo-400 mx-1 "><Link to={`/category/${data.category.slug}`}>{data.category.name}</Link></span> &middot;
+                                <span className=" hover:text-indigo-500 leading-8 transition duration-700 ease-in-out text-sm font-medium text-indigo-400  mx-1"><Link to={`/category/${data.category.slug}`}>{data.category.name}</Link></span> &middot;
                                 <span className=" hover:text-indigo-500 leading-8 transition duration-700 ease-in-out text-sm font-medium text-indigo-400 mx-1">{moment(data.published).format('LL')}</span> &middot;
                                 <span className=" hover:text-indigo-500 leading-8 transition duration-700 ease-in-out text-sm font-medium text-indigo-400 mx-1">{data.time_read} min.</span> &middot;
                                 <span className=" hover:text-indigo-500 leading-8 transition duration-700 ease-in-out text-sm font-medium text-indigo-400 mx-1">Vistas: {data.views}</span>

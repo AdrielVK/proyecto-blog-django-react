@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom"
 
 import { useState } from "react"
 
-export default function CategoriesHeader({categories}) { 
+export default function SearchHeader({categories}) { 
     
     const location = useLocation()
     const navigate = useNavigate()
@@ -24,23 +24,14 @@ export default function CategoriesHeader({categories}) {
                 <div className="col-span-10">
                     <div className="space-x-8 px-8 ">
                         <div className="relative">
-                            <div className="relative -mb-6 w-full overflow-x-auto pb-6">
+                            <div className=" relative -mb-6 w-full overflow-x-auto pb-6">
                                 <ul 
                                 role="list"
-                                className="mx-4 inline-flex space-x-8 sm:mx-6 "
+                                className="mx-4 inline-flex items-center space-x-8 sm:mx-6 "
                                 >
-                                    <Link to="/blog" className={`${location.pathname === '/blog' ? "text-indigo-500 bg-white":"text-gray-900 hover:text-indigo-500"} inline-flex flex-col text-center lg:w-auto py-2 px-6  text-gray-900 rounded-lg text-sm font-semibold`}>
-                                        All
+                                    <Link to="/blog" className={` transition transition-duration-400  ease-in-out bg-white hover:text-indigo-400 inline-flex flex-col text-center lg:w-auto py-2 px-6 rounded-lg text-sm font-semibold`}>
+                                        Volver
                                     </Link>
-                                    {
-                                        categories&&categories.map((category, index) => (
-                                            <Link key={index} to={`/category/${category.slug}`} 
-                                            className={`${location.pathname === `/category/${category.slug}`?"text-indigo-500 bg-white":"text-gray-900 hover:text-indigo-500"} inline-flex flex-col text-center lg:w-auto py-2 px-6 text-gray-900 rounded-lg text-sm font-semibold`}>
-                                                {category.name}
-                                            </Link>
-                                        ))
-                                    }
-
                                 </ul>
                             </div>
                         </div>
