@@ -24,10 +24,10 @@ export default function({data, index}){
             </div>
             <div className="flex flex-1 flex-col justify-between bg-white p-6">
                 <div className="flex-1">
-                    <p className="text-sm font-medium text-indigo-600">
-                        <a href={data.category.href} className="hover:underline">
-                            {data.category.name}
-                        </a>
+                    <p className=" hover:underlinetext-sm font-medium text-indigo-600">
+                      
+                        {data.category.name}
+                    
                     </p>
                     <a href={data.href} className="mt-2 block">
                         <p id={index} className="transition duration-400 ease-in-out lg:text-4xl text-2xl pt-4 pb-6 font-semibold  ">{data.title}</p>

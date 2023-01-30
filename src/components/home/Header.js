@@ -12,7 +12,7 @@ function Header(){
           <div className="mx-auto max-w-6xl pt-20 pb-32 sm:pt-48 sm:pb-40">
             <div>
               
-              <div>
+              <div >
                 <h1 className="text-4xl text-indigo-900 font-bold tracking-tight  sm:text-6xl">
                   Texto de <span> </span>
                   <Typewriter

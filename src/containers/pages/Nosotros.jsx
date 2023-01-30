@@ -8,10 +8,12 @@ import { useEffect } from "react"
 import TestStats from "components/nosotros/TestStats"
 import Client from "components/nosotros/Clients"
 import {Helmet} from 'react-helmet-async'
-
+import AOS from 'aos'
+import "aos/dist/aos.css";
 function Home(){
     useEffect(()=>{
         window.scrollTo(0,0)
+        
     },[])
     return(
         <Layout>
@@ -25,10 +27,22 @@ function Home(){
             </Helmet>
             <Navbar/>
             <div className="pt-28">
+                <div data-aos="fade-up"
+                >
                 <Header/>
+                </div>
+                <div data-aos="fade-left"
+                >
                 <TestStats/>
+                </div>
+                <div data-aos="fade-right"
+                >
                 <Team/>
+                </div>
+                <div data-aos="fade-down-left"
+                >
                 <Client/>
+                </div>
                 <Testimonial/>
                 
             </div>

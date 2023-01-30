@@ -25,8 +25,8 @@ function PostDetail({
             <Navbar/>
                 {
                     post && post.slug === slug ?
-                    <div className="pt-24">
-                        <div className="relative overflow-hidden bg-white   lg:px-48 px-16 py-16">
+                    <div className="bg-gradient-to-r from-purple-100 via-white to-pink-100  pt-24">
+                        <div className="relative overflow-hidden   lg:px-48 px-16 py-16">
                             <div className="relative px-4 sm:px-6 lg:px-8">
                                 <Link to={`/category/${post.category.slug}`}
                                 className="block text-center text-lg font-semibold text-indigo-500"

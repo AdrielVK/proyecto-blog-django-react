@@ -5,7 +5,8 @@ import ServicesList from "components/services/ServicesList"
 import Layout from "hocs/layouts/Layout"
 import { useEffect } from "react"
 import {Helmet} from 'react-helmet-async'
-
+import AOS from 'aos' 
+import "aos/dist/aos.css";
 
 function Services(){
     const posts_software = [
@@ -67,6 +68,7 @@ function Services(){
 
     useEffect(()=>{
       window.scrollTo(0,0)
+      
     },[])
 
     return(
@@ -82,7 +84,13 @@ function Services(){
             </Helmet>
             <Navbar/>
             <div className="pt-28">
+              <div>
+                <div data-aos="fade-up"
+                    >
+                
                 <HeaderServices/>
+                </div>
+              </div>
                 <ServicesList
                     posts={posts_software} 
                      

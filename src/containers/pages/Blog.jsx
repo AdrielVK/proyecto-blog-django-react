@@ -10,7 +10,7 @@ import {get_blog_list_page } from "redux/actions/blog/blog";
 import CategoriesHeader from "components/blog/CategoriesHearder"
 import BlogList from "components/blog/BlogList"
 import BlogCardHorizontal from "components/blog/BlogCardHorizontal"
-
+import AOS from 'aos'
 function Blog({
     get_categories,
     categories,
@@ -28,6 +28,8 @@ function Blog({
         window.scrollTo(0,0)
         get_categories()
         get_blog_list()
+        
+
         
     },[])
 

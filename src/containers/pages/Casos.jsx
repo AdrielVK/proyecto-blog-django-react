@@ -5,10 +5,12 @@ import Navbar from "components/Navbar"
 import Layout from "hocs/layouts/Layout"
 import { useEffect } from "react"
 import {Helmet} from 'react-helmet-async'
-
+import AOS from 'aos'
+import "aos/dist/aos.css";
 function Casos(){
     useEffect(()=>{
         window.scrollTo(0,0)
+        
     },[])
     return(
         <Layout>
@@ -22,7 +24,10 @@ function Casos(){
             </Helmet>
             <Navbar/>
             <div className="pt-28">
+                <div data-aos="fade-up"
+                    >
                 <HeaderCasos/>
+                </div>
                 <CasesList/>
             </div>
             <Footer/>

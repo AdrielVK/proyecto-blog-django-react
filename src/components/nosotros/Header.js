@@ -9,12 +9,11 @@ export default function HeaderServices(){
             
               <div>
                 <h1 className="text-4xl text-indigo-900 font-bold tracking-tight  sm:text-6xl">
-                  Nosotros 
+                  Us 
             
                 </h1>
                 <p className="mt-6 text-lg max-w-2xl sm:max-w-86 md:max-w-xl leading-8 text-gray-600 pt-10 ">
-                   Lorep ipsum Lorep ipsum Lorep ipsumLorep ipsumLorep ipsumLorep ipsumLorep 
-                   Lorep ipsum Lorep ipsum Lorep ipsum Lorep ipsum Lorep ipsum Servicio
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
                 </p>
               </div>
               

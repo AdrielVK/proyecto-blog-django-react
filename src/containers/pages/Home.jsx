@@ -10,12 +10,13 @@ import Layout from "hocs/layouts/Layout"
 import { useEffect } from "react"
 import {Helmet} from 'react-helmet-async'
 import { connect } from "react-redux"
-
+import AOS from 'aos'
+import "aos/dist/aos.css";
 function Home(){
 
     useEffect(()=>{
         window.scrollTo(0,0)
-        
+       
     },[])
 
     return(
@@ -30,10 +31,24 @@ function Home(){
             </Helmet>
             <Navbar/>
             <div className="pt-28">
-                <Header/>
-                <Incentive/>
-                <UseCases/>
-                <Features/>
+                <div data-aos="fade-up"
+                    >
+                    <Header/>
+                </div>
+                <div data-aos="fade-down-right"
+                    >
+                    <Incentive />
+                </div>
+                 
+                <div data-aos="fade-down"
+                    >
+                    <UseCases/>
+                </div>
+                <div data-aos="fade-down-left"
+                    >
+                    <Features/>
+                    
+                </div>
                 <CTA/>
                 <BlogList/>
             </div>

@@ -1,7 +1,12 @@
 import { connect } from "react-redux";
 import {motion} from 'framer-motion'
-
+import { useEffect } from "react"
+import AOS from 'aos'
 function Layout({children}){
+    useEffect(()=>{
+        AOS.init();
+        AOS.refresh();
+      },[])
     return(
         <motion.div
         initial={{opacity:0}}
